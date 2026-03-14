@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SIC Feedback Form - Vulnerable Version (XSS Demo)">
+  <title>SIC Feedback Form — Vulnerable Version</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="header">
+    <div class="header-content">
+      <h1>Security in Computing — Feedback Form</h1>
+      <p class="subtitle">Course Feedback & Module Ratings</p>
+      <p class="course-info">SIC Macro Project 12 — XSS Attack & Defense Demo</p>
+      <span class="version-badge vulnerable">
+        <span class="dot"></span>
+        Vulnerable Version
+      </span>
+    </div>
+  </header>
+
+  <!-- ===== Nav Tabs ===== -->
+  <nav class="nav-tabs">
+    <a href="vulnerable.html" class="active">⚠️ Vulnerable</a>
+    <a href="secure.html">🛡️ Secure</a>
+  </nav>
+
+  <!-- ===== Main Content ===== -->
+  <main class="container">
+
+    <!-- Student Info -->
+    <section class="student-info">
+      <h2><span class="icon">👤</span> Student Information</h2>
+      <div class="info-grid">
+        <div class="info-field">
+          <label for="vuln-student-name">Full Name</label>
+          <input type="text" id="vuln-student-name" placeholder="Enter your full name">
+        </div>
+        <div class="info-field">
+          <label for="vuln-student-roll">Roll Number</label>
+          <input type="text" id="vuln-student-roll" placeholder="Enter your roll number">
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Title: Modules -->
+    <h2 class="section-title"><span class="icon">📚</span> Module Ratings & Feedback</h2>
+
+    <!-- Module 1 -->
+    <div class="module-card">
+      <div class="module-header">
+        <span class="module-number">Module 1</span>
+        <span class="module-title">Basics of Number Theory and Security</span>
+      </div>
+      <div class="rating-section">
+        <span class="rating-label">Your Rating</span>
+        <div class="star-rating" id="vuln-stars-mod1">
+          <input type="radio" id="vuln-mod1-star5" name="vuln-mod1-rating" value="5">
+          <label for="vuln-mod1-star5" title="5 stars">★</label>
+          <input type="radio" id="vuln-mod1-star4" name="vuln-mod1-rating" value="4">
+          <label for="vuln-mod1-star4" title="4 stars">★</label>
+          <input type="radio" id="vuln-mod1-star3" name="vuln-mod1-rating" value="3">
+          <label for="vuln-mod1-star3" title="3 stars">★</label>
+          <input type="radio" id="vuln-mod1-star2" name="vuln-mod1-rating" value="2">
+          <label for="vuln-mod1-star2" title="2 stars">★</label>
+          <input type="radio" id="vuln-mod1-star1" name="vuln-mod1-rating" value="1">
+          <label for="vuln-mod1-star1" title="1 star">★</label>
+        </div>
+      </div>
+      <div class="feedback-section">
+        <label for="vuln-feedback-mod1">Your Feedback</label>
+        <textarea id="vuln-feedback-mod1" placeholder="Share your feedback on this module..."></textarea>
+      </div>
+    </div>
+
+    <!-- Module 2 -->
+    <div class="module-card">
+      <div class="module-header">
+        <span class="module-number">Module 2</span>
+        <span class="module-title">Symmetric Ciphers</span>
+      </div>
+      <div class="rating-section">
+        <span class="rating-label">Your Rating</span>
+        <div class="star-rating" id="vuln-stars-mod2">
+          <input type="radio" id="vuln-mod2-star5" name="vuln-mod2-rating" value="5">
+          <label for="vuln-mod2-star5" title="5 stars">★</label>
+          <input type="radio" id="vuln-mod2-star4" name="vuln-mod2-rating" value="4">
+          <label for="vuln-mod2-star4" title="4 stars">★</label>
+          <input type="radio" id="vuln-mod2-star3" name="vuln-mod2-rating" value="3">
+          <label for="vuln-mod2-star3" title="3 stars">★</label>
+          <input type="radio" id="vuln-mod2-star2" name="vuln-mod2-rating" value="2">
+          <label for="vuln-mod2-star2" title="2 stars">★</label>
+          <input type="radio" id="vuln-mod2-star1" name="vuln-mod2-rating" value="1">
+          <label for="vuln-mod2-star1" title="1 star">★</label>
+        </div>
+      </div>
+      <div class="feedback-section">
+        <label for="vuln-feedback-mod2">Your Feedback</label>
+        <textarea id="vuln-feedback-mod2" placeholder="Share your feedback on this module..."></textarea>
+      </div>
+    </div>
+
+    <!-- Module 3 -->
+    <div class="module-card">
+      <div class="module-header">
+        <span class="module-number">Module 3</span>
+        <span class="module-title">Asymmetric Ciphers and Key Distribution</span>
+      </div>
+      <div class="rating-section">
+        <span class="rating-label">Your Rating</span>
+        <div class="star-rating" id="vuln-stars-mod3">
+          <input type="radio" id="vuln-mod3-star5" name="vuln-mod3-rating" value="5">
+          <label for="vuln-mod3-star5" title="5 stars">★</label>
+          <input type="radio" id="vuln-mod3-star4" name="vuln-mod3-rating" value="4">
+          <label for="vuln-mod3-star4" title="4 stars">★</label>
+          <input type="radio" id="vuln-mod3-star3" name="vuln-mod3-rating" value="3">
+          <label for="vuln-mod3-star3" title="3 stars">★</label>
+          <input type="radio" id="vuln-mod3-star2" name="vuln-mod3-rating" value="2">
+          <label for="vuln-mod3-star2" title="2 stars">★</label>
+          <input type="radio" id="vuln-mod3-star1" name="vuln-mod3-rating" value="1">
+          <label for="vuln-mod3-star1" title="1 star">★</label>
+        </div>
+      </div>
+      <div class="feedback-section">
+        <label for="vuln-feedback-mod3">Your Feedback</label>
+        <textarea id="vuln-feedback-mod3" placeholder="Share your feedback on this module..."></textarea>
+      </div>
+    </div>
+
+    <!-- Module 4 -->
+    <div class="module-card">
+      <div class="module-header">
+        <span class="module-number">Module 4</span>
+        <span class="module-title">Cryptographic Data Integrity Concepts</span>
+      </div>
+      <div class="rating-section">
+        <span class="rating-label">Your Rating</span>
+        <div class="star-rating" id="vuln-stars-mod4">
+          <input type="radio" id="vuln-mod4-star5" name="vuln-mod4-rating" value="5">
+          <label for="vuln-mod4-star5" title="5 stars">★</label>
+          <input type="radio" id="vuln-mod4-star4" name="vuln-mod4-rating" value="4">
+          <label for="vuln-mod4-star4" title="4 stars">★</label>
+          <input type="radio" id="vuln-mod4-star3" name="vuln-mod4-rating" value="3">
+          <label for="vuln-mod4-star3" title="3 stars">★</label>
+          <input type="radio" id="vuln-mod4-star2" name="vuln-mod4-rating" value="2">
+          <label for="vuln-mod4-star2" title="2 stars">★</label>
+          <input type="radio" id="vuln-mod4-star1" name="vuln-mod4-rating" value="1">
+          <label for="vuln-mod4-star1" title="1 star">★</label>
+        </div>
+      </div>
+      <div class="feedback-section">
+        <label for="vuln-feedback-mod4">Your Feedback</label>
+        <textarea id="vuln-feedback-mod4" placeholder="Share your feedback on this module..."></textarea>
+      </div>
+    </div>
+
+    <!-- Module 5 -->
+    <div class="module-card">
+      <div class="module-header">
+        <span class="module-number">Module 5</span>
+        <span class="module-title">Network and Internet Security</span>
+      </div>
+      <div class="rating-section">
+        <span class="rating-label">Your Rating</span>
+        <div class="star-rating" id="vuln-stars-mod5">
+          <input type="radio" id="vuln-mod5-star5" name="vuln-mod5-rating" value="5">
+          <label for="vuln-mod5-star5" title="5 stars">★</label>
+          <input type="radio" id="vuln-mod5-star4" name="vuln-mod5-rating" value="4">
+          <label for="vuln-mod5-star4" title="4 stars">★</label>
+          <input type="radio" id="vuln-mod5-star3" name="vuln-mod5-rating" value="3">
+          <label for="vuln-mod5-star3" title="3 stars">★</label>
+          <input type="radio" id="vuln-mod5-star2" name="vuln-mod5-rating" value="2">
+          <label for="vuln-mod5-star2" title="2 stars">★</label>
+          <input type="radio" id="vuln-mod5-star1" name="vuln-mod5-rating" value="1">
+          <label for="vuln-mod5-star1" title="1 star">★</label>
+        </div>
+      </div>
+      <div class="feedback-section">
+        <label for="vuln-feedback-mod5">Your Feedback</label>
+        <textarea id="vuln-feedback-mod5" placeholder="Share your feedback on this module..."></textarea>
+      </div>
+    </div>
+
+    <!-- Module 6 -->
+    <div class="module-card">
+      <div class="module-header">
+        <span class="module-number">Module 6</span>
+        <span class="module-title">Cloud and IoT Security</span>
+      </div>
+      <div class="rating-section">
+        <span class="rating-label">Your Rating</span>
+        <div class="star-rating" id="vuln-stars-mod6">
+          <input type="radio" id="vuln-mod6-star5" name="vuln-mod6-rating" value="5">
+          <label for="vuln-mod6-star5" title="5 stars">★</label>
+          <input type="radio" id="vuln-mod6-star4" name="vuln-mod6-rating" value="4">
+          <label for="vuln-mod6-star4" title="4 stars">★</label>
+          <input type="radio" id="vuln-mod6-star3" name="vuln-mod6-rating" value="3">
+          <label for="vuln-mod6-star3" title="3 stars">★</label>
+          <input type="radio" id="vuln-mod6-star2" name="vuln-mod6-rating" value="2">
+          <label for="vuln-mod6-star2" title="2 stars">★</label>
+          <input type="radio" id="vuln-mod6-star1" name="vuln-mod6-rating" value="1">
+          <label for="vuln-mod6-star1" title="1 star">★</label>
+        </div>
+      </div>
+      <div class="feedback-section">
+        <label for="vuln-feedback-mod6">Your Feedback</label>
+        <textarea id="vuln-feedback-mod6" placeholder="Share your feedback on this module..."></textarea>
+      </div>
+    </div>
+
+    <!-- Section Title: Teacher -->
+    <h2 class="section-title"><span class="icon">👩‍🏫</span> Teacher Rating & Feedback</h2>
+
+    <!-- Teacher Card -->
+    <div class="teacher-card">
+      <div class="teacher-header">
+        <span class="teacher-badge">Instructor</span>
+        <span class="teacher-name">Ms. Anita John</span>
+      </div>
+      <div class="rating-section">
+        <span class="rating-label">Your Rating</span>
+        <div class="star-rating" id="vuln-stars-teacher">
+          <input type="radio" id="vuln-teacher-star5" name="vuln-teacher-rating" value="5">
+          <label for="vuln-teacher-star5" title="5 stars">★</label>
+          <input type="radio" id="vuln-teacher-star4" name="vuln-teacher-rating" value="4">
+          <label for="vuln-teacher-star4" title="4 stars">★</label>
+          <input type="radio" id="vuln-teacher-star3" name="vuln-teacher-rating" value="3">
+          <label for="vuln-teacher-star3" title="3 stars">★</label>
+          <input type="radio" id="vuln-teacher-star2" name="vuln-teacher-rating" value="2">
+          <label for="vuln-teacher-star2" title="2 stars">★</label>
+          <input type="radio" id="vuln-teacher-star1" name="vuln-teacher-rating" value="1">
+          <label for="vuln-teacher-star1" title="1 star">★</label>
+        </div>
+      </div>
+      <div class="feedback-section">
+        <label for="vuln-feedback-teacher">Your Feedback</label>
+        <textarea id="vuln-feedback-teacher" placeholder="Share your feedback about the instructor..."></textarea>
+      </div>
+    </div>
+
+    <!-- Output / Preview Area -->
+    <div class="output-area" id="vuln-output-area">
+      <h3><span class="icon">📋</span> Submitted Feedback Preview</h3>
+      <div class="output-content" id="vuln-output-content">
+        <!-- JS will populate this -->
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="btn-container">
+      <button type="button" class="btn btn-primary" id="vuln-submit-btn">🚀 Submit Feedback</button>
+      <button type="button" class="btn btn-secondary" id="vuln-reset-btn">🔄 Reset Form</button>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>SIC Macro Project 12 — Cross-Site Scripting (XSS) Attack & Defense Demo</p>
+    <p>⚠️ This is the <strong>vulnerable</strong> version — input is NOT sanitized.</p>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="vuln-toast"></div>
+
+  <!-- JS -->
+  <script src="script_vuln.js"></script>
+
+</body>
+</html>
